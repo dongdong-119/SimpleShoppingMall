@@ -33,6 +33,7 @@ public abstract class Item {
     private List<Category> categories = new ArrayList<>();
 
 
+
     //==비지니스 로직==//
 
     /*
@@ -50,7 +51,7 @@ public abstract class Item {
 
         int tempQuantity = this.stockQuantity - quantity;
 
-        if (tempQuantity < 0){
+        if (tempQuantity < 0) {
             throw new NotEnoughStockException("재고가 부족합니다.");
         }
 

@@ -17,10 +17,20 @@ public class ItemService {
 
     private final ItemRepository itemRepository;
 
+
+    // 추가 메소드
     @Transactional
     public void saveItem(Item item){
 
         itemRepository.save(item);
+
+    }
+
+    // 삭제 메소드
+    @Transactional
+    public void deleteItem(Item item){
+
+        itemRepository.delete(item);
 
     }
 

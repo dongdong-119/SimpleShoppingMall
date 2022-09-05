@@ -1,4 +1,4 @@
-package jpashop1_practice.practice.controller;
+package jpashop1_practice.practice.controller.form;
 
 
 import lombok.Getter;

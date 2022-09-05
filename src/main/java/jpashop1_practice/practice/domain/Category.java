@@ -29,28 +29,15 @@ public class Category {
     private List<Item> items = new ArrayList<>();
 
 
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "parent_id")
-    private Category parent;
 
+    // 상품과 카테고리 편의메소드(카테고리에 만들면됨)
+    // 상품 저장 시 카테고리 지정
+    public void addItem(Item item){
+        getItems().add(item);
 
-    @OneToMany(mappedBy = "parent")
-    private List<Category> child = new ArrayList<>();
-
-
-
-    //==연관관계 편의 메소드==//
-    public void addChildCategory(Category child){
-        this.child.add(child);
-        child.setParent(this);
+        for (Item item1 : items) {
+            item1.getCategories().add(this);
+        }
     }
-
-    //상품과 카테고리 편의메소드(카테고리에 만들면됨)
-
-
-
-
-
-
 
 }

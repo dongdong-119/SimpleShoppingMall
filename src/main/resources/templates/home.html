@@ -4,6 +4,14 @@
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+
+<style>
+    .category {
+        color : #6f42c1;
+        background-color : #d3d6d8;
+    }
+</style>
+
 <body>
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader" />
@@ -23,6 +31,10 @@
         <p>
             <a class="btn btn-lg btn-info" href="/order">상품 주문</a>
             <a class="btn btn-lg btn-info" href="/orders">주문 내역</a>
+        </p>
+        <p class="lead">카테고리 관리</p>
+        <p>
+            <a class="btn btn-lg btn-info category" href="/category">카테고리 추가</a>
         </p>
     </div>
     <div th:replace="fragments/footer :: footer" />

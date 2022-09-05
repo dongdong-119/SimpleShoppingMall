@@ -25,6 +25,13 @@ public class ItemRepository {
         }
     }
 
+    //상품 삭제
+    public void delete(Item item){
+
+        em.remove(item);
+
+    }
+
 
     //상품 단건 검색
     public Item findOne(Long id){
